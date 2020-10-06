@@ -12,9 +12,6 @@ def index():
     return "<h1>hello world<h1>"
 
 
-def main():
+if __name__ == '__main__':
     CORS(app)
     app.run()
-
-
-main()
