@@ -9,7 +9,7 @@ COLLECTIONS = ["sandbox"]
 URL = f"mongodb+srv://{USERNAME}:{PASSWORD}@cluster0.u6lhh.mongodb.net/{DB}?retryWrites=true&w=majority"
 HOST = "localhost"
 PORT = 27017
-mongo = MongoDB(host=HOST, port=PORT, database=DB, docs=COLLECTIONS)
+mongo = MongoDB(url=URL, database=DB, docs=COLLECTIONS)
 sandbox = mongo.collection["sandbox"]
 
 app = Flask(__name__)
