@@ -2,9 +2,17 @@
 
 ### Prerequisites
 
+##### General 
 ```bash
 $ curl https://cli-assets.heroku.com/install.sh | sh
 $ pip3 install gunicorn
+```
+
+##### MongoDB
+```bash
+$ pip3 install pymongo
+$ pip3 install pymongo[srv]
+$ pip3 install dnspython
 ```
 
 ### Deployment
@@ -36,5 +44,5 @@ Continuous
 $ git pull heroku master
 $ git add <FILES>
 $ git commit -m "<MESSAGE>"
-git push heroku master
+$ git push heroku master
 ```
