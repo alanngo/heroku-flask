@@ -1,14 +1,14 @@
 from flask import *
 from flask_cors import *
 
-from mongo.MongoDB import MongoDB
+from mongo.MongoDB import *
 
 USERNAME = PASSWORD = "mongo"
 DB = "sandboxDB"
-COLLECTIONS = ["sandbox"]
+COLLECTIONS = {"sandbox" : AUTO_INCREMENT}
 URL = f"mongodb+srv://{USERNAME}:{PASSWORD}@cluster0.u6lhh.mongodb.net/{DB}?retryWrites=true&w=majority"
 
-mongo = MongoDB(url=URL, database=DB, docs=COLLECTIONS)
+mongo = MongoDB(url=URL, database=DB, collections=COLLECTIONS)
 sandbox = mongo.collection["sandbox"]
 
 app = Flask(__name__)
@@ -53,5 +53,4 @@ def show_collections():
 
 if __name__ == '__main__':
     CORS(app)
-    app.debug = True
-    app.run()
+    app.run(debug=True)
