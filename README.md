@@ -1,7 +1,7 @@
 # Deploy Flask App to Heroku
 
 ## Deployment
-`https://ramen-flask-app.herokuapp.com/`
+https://ramen-flask-app.herokuapp.com/
 
 ### Prerequisites
 
